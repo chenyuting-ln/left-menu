@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>建桥</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<script type="text/javascript" src="js/jQuery.js"></script>
+		<script type="text/javascript" src="layer/layer.js"></script>
+		
+		
+		<script type="text/javascript">
+			$(function() {
+				$(".policy a").on('click', function() {
+				
+					layer.open({
+						type: 2,
+						title: '其它支持',
+						maxmin: true,
+						shadeClose: true, //点击遮罩关闭层
+						area: ['90%', '90%'],
+						content: 'pop-layout.html'
+					});
+				});
+				var h = $(window).height();
+				$("#mian").css("height", $(".main").height());
+				$(".mian-h").css("height", $(".main").height());
+				$(".menu").click(function() {
+					var w = $("#silde").css("left");
+					if (parseInt(w) < 0) {
+						$("#silde").animate({
+							left: "0"
+						});
+						$("#main").animate({
+							left: "300"
+						});
+						$("body").css({
+							"height": h,
+							"overflow": "hidden"
+						});
+					} else {
+						$("#silde").animate({
+							left: "-300"
+						});
+						$("#main").animate({
+							left: "0"
+						});
+					}
+				})
+			});
+		</script>
+	</head>
+
+	<body>
+		<!--silde-->
+
+		<!--silde end-->
+		<div class="warp">
+			<div id="silde" class="silde">
+				<span>建桥美容产业园</span>
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">进入园区</a></li>
+					<li><a href="#">关于重庆</a></li>
+					<li><a href="#">政策法规</a></li>
+					<li><a href="#">进驻流程</a></li>
+				</ul>
+			</div>
+
+			<!--main-->
+			<div class="b-f"></div>
+			<div class="mian-h">
+				<div id="main">
+					<div class="main">
+						<div class="header">
+							<img class="menu" src="img/list.png" alt="" />
+							<span>名字</span>
+							<img class="arrow" src="img/arrow.jpg" alt="" />
+						</div>
+
+						<!--banner-->
+						<div class="banner">
+							<img src="img/index_banner_1.jpg" alt="" />
+						</div>
+						<!--banner end-->
+						<!--cont-->
+						<div class="cont">
+							<div class="policy">
+								<span class="cont-f right cont1">
+							<a>01: CFDA产品进口许可申请办理</a>
+							<a>02: 物业支持</a>
+							<a>03: 跨境电子商务网络直销</a>
+						</span>
+								<span class="cont-f left cont2">
+							<a>04: 产品诚信防伪查证平台</a>
+							<a>05: 员工招募与职业能力培训</a>
+							<a>06: ISO标准化妆品中试工厂</a>
+							<a>07: 销售渠道拓展</a>
+						</span>
+								<span class="cont-f right cont3">
+							<a>08: 国际物流承运</a>
+							<a>09: 企业进入股票市场补贴</a>
+							<a>10: 企业间交易委托支付</a>
+							<a>11: 其他支持</a>
+						</span>
+							</div>
+
+						</div>
+						<!--cont end-->
+						<!--弹出框-->
+
+						<!--弹出框 end-->
+						<!--footer-->
+						<div class="footer">
+							Copyright © 2012-2015 悠活购 版权所有
+							<!--footer end-->
+						</div>
+					</div>
+
+				</div>
+				<!--main end-->
+
+			</div>
+	</body>
+
+</html>
